@@ -15,5 +15,5 @@ $ docker run -d seayou/s3rver
 ```
 
 ```bash
-docker exec <container_id> sh -c "AWS_ACCESS_KEY_ID=fake AWS_SECRET_ACCESS_KEY=fake AWS_DEFAULT_REGION=fake aws --endpoint-url http://localhost:5000 s3api create-bucket --bucket foo"
+$ docker exec <container_id> sh -c "AWS_ACCESS_KEY_ID=fake AWS_SECRET_ACCESS_KEY=fake AWS_DEFAULT_REGION=fake aws --endpoint-url http://localhost:5000 s3api create-bucket --bucket foo"
 ```
