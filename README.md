@@ -4,9 +4,15 @@ Fake S3 server for testing purposes: https://github.com/jamhall/s3rver
 
 * built on top of `mhart/alpine-node` base image
 * [![](https://badge.imagelayers.io/seayou/s3rver:latest.svg)](https://imagelayers.io/?images=seayou/s3rver:latest 'Get your own badge on imagelayers.io')
-* listens on port 5000, stores data in `/tmp`
+* listens on port 5000 by default, stores data in `/tmp`
 * contains awscli for easy bucket management
 * uses [Tini](https://github.com/krallin/tini), a minimalistic init system to handle signaling properly
+
+* To control the port to listen on change the `PORT` environment variable.
+```bash
+$ docker run -e PORT=4569 -d seayou/s3rver
+```
+
 
 ### Example usage:
 
